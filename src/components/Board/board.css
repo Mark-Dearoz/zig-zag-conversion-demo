@@ -1,0 +1,9 @@
+.board-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: cornflowerblue;
+	width: fit-content;
+	padding: 2em;
+	border-radius: 1em;
+}

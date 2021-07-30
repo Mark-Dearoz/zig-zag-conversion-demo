@@ -1,0 +1,12 @@
+.node-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2em;
+	height: 2em;
+	margin: 0.25rem;
+}
+.node-h2 {
+	font-size: 2em;
+	transition: opacity 100ms ease-in-out;
+}

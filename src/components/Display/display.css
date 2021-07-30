@@ -1,0 +1,9 @@
+.display-container {
+	margin-bottom: 2em;
+	background-color: rgb(240, 240, 240);
+	border-radius: 2px;
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.display-row {
+	display: flex;
+}
