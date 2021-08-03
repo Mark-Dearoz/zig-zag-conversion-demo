@@ -7,7 +7,7 @@ const INIT_STATE = {}
 const NUM_OF_ROW = 6
 const NUM_OF_COL = (NUM_OF_ROW - 1) * 2 + 1
 const MAX_LENGTH = 3 * NUM_OF_ROW + NUM_OF_COL - 3
-const ANIMATION_TIME = 175
+const ANIMATION_TIME = 200
 const Board = () => {
 	const [nodes, setNodes] = useState(null)
 	const [input, setInput] = useState('')
@@ -38,7 +38,7 @@ const Board = () => {
 		setTimeout(() => {
 			nodeKeys.sort((a, b) => {
 				let [a1, a2] = a.split(',')
-				let [b1, b2] = b.split(',,')
+				let [b1, b2] = b.split(',')
 				if (a1 === b1) return parseInt(a2) - parseInt(b2)
 				return parseInt(a1) - parseInt(b1)
 			})
@@ -54,10 +54,10 @@ const Board = () => {
 				i++
 				if (i === nodeKeys.length) clearInterval(outputAnimation)
 			}, time)
-		}, time * nodeKeys.length)
+		}, time * nodeKeys.length + 300)
 		setTimeout(() => {
 			setDisabled(false)
-		}, time * nodeKeys.length * 2 + 100)
+		}, time * nodeKeys.length * 2 + 500)
 	}
 	const submit = () => {
 		if (disabled) return
